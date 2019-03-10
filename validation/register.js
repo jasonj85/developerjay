@@ -17,7 +17,7 @@ module.exports = function validateRegisterInput(data) {
   }
   // Name
   if (Validator.isEmpty(data.name)) {
-    errors.name = '\'name\' field is required';
+    errors.name = 'Name field is required';
   }
   // Email
   if (!Validator.isEmail(data.email)) {
@@ -25,7 +25,7 @@ module.exports = function validateRegisterInput(data) {
   }
 
   if (Validator.isEmpty(data.email)) {
-    errors.email = '\'email\' field is required';
+    errors.email = 'Email field is required';
   }
   // Password
   if (!Validator.isLength(data.password, {
@@ -36,7 +36,7 @@ module.exports = function validateRegisterInput(data) {
   }
 
   if (Validator.isEmpty(data.password)) {
-    errors.password = '\'password\' field is required';
+    errors.password = 'Password field is required';
   }
   // Password confirm
   if (!Validator.equals(data.password, data.password2)) {
@@ -44,7 +44,7 @@ module.exports = function validateRegisterInput(data) {
   }
 
   if (Validator.isEmpty(data.password2)) {
-    errors.confirmpassword = '\'confirmpassword\' field is required';
+    errors.confirmpassword = 'Confirm password field is required';
   }
 
   return {
