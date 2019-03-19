@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import isEmpty from "../../validation/is-empty";
+import Moment from "react-moment";
 
 class ProfileItem extends Component {
   render() {
@@ -24,8 +25,20 @@ class ProfileItem extends Component {
               {isEmpty(profile.company) ? null : (
                 <span>at {profile.company}</span>
               )}
+              {isEmpty(profile.location) ? null : (
+                <span>
+                  <br />
+                  {profile.location}
+                </span>
+              )}
             </p>
-            {isEmpty(profile.location) ? null : <p>at {profile.location}</p>}
+            <p>
+              {profile.education.length} Education Entries <br />
+              {profile.experience.length} Experience Entries <br />
+            </p>
+            <p>
+              Last updated <Moment fromNow>{profile.date}</Moment>
+            </p>
             <Link to={`/profile/${profile.handle}`} className="btn btn-info">
               View this profile
             </Link>

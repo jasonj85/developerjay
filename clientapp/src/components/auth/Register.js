@@ -60,6 +60,11 @@ class Register extends Component {
               <p className="lead text-center">
                 Create your Developer Jay account
               </p>
+              <div className="alert alert-warning" role="alert">
+                <i className="fas fa-info-circle mr-2" /> This
+                is a demo site and any new registrations will be deleted at a
+                later date.
+              </div>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
                   placeHolder="Name"

@@ -41,7 +41,7 @@ class ProfileGithub extends Component {
                 rel="noopener noreferrer"
                 title={repo.name}
               >
-                {repo.name}
+                <i className="fas fa-code-branch mr-2" /> {repo.name}
               </a>
             </h4>
             <p>{repo.description}</p>
@@ -64,7 +64,10 @@ class ProfileGithub extends Component {
     return (
       <div ref="myRef">
         <hr />
-        <h3 className="mb-4">Latest Github Repos</h3>
+        <h3 className="mb-4">
+          <i className="fab fa-github mr-2" />
+          Latest Github Repos
+        </h3>
         {repoList}
       </div>
     );

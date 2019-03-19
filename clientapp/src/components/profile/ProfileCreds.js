@@ -64,7 +64,10 @@ class ProfileCreds extends Component {
     return (
       <div className="row">
         <div className="col-md-6">
-          <h3 className="text-center text-info">Experience</h3>
+          <h3 className="text-center text-info">
+            <i className="fas fa-briefcase mr-2" />
+            Experience
+          </h3>
           {expList.length > 0 ? (
             <ul className="list-group">{expList}</ul>
           ) : (
@@ -72,7 +75,10 @@ class ProfileCreds extends Component {
           )}
         </div>
         <div className="col-md-6">
-          <h3 className="text-center text-info">Education</h3>
+          <h3 className="text-center text-info">
+            <i className="fas fa-graduation-cap mr-2" />
+            Education
+          </h3>
           {eduList.length > 0 ? (
             <ul className="list-group">{eduList}</ul>
           ) : (
