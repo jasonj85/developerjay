@@ -1,4 +1,6 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿using DeveloperJayLibrary.DataAccess;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
 
@@ -48,8 +50,9 @@ public static class DependencyInjectionExtensions
 
     public static void AddCustomServices(this WebApplicationBuilder builder)
     {
-
-
+        builder.Services.AddDbContext<BlogContext>(opts => {
+            opts.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
+        });
     }
 
     public static void AddHealthCheckServices(this WebApplicationBuilder builder)
