@@ -22,34 +22,34 @@ public class PostsController : ControllerBase
     [HttpGet]
     public async Task<ActionResult<List<Post>>> GetPosts()
     {
-        var result = await _blog.Posts.Where(p => p.Active == true).ToListAsync();
-        return Ok(result);
+        var posts = await _blog.Posts.Where(p => p.Active == true).ToListAsync();
+        return Ok(posts);
     }
 
     // GET api/posts/5
     [HttpGet("{id}")]
     public async Task<ActionResult<Post>> GetPostById(int id)
     {
-        var result = await _blog.Posts.FindAsync(id);
+        var post = await _blog.Posts.FindAsync(id);
 
-        if (result == null)
+        if (post == null)
         {
             return NotFound($"Post with Id: {id} not found!");
         }
 
-        return Ok(result);
+        return Ok(post);
     }
 
     // POST api/posts
     [HttpPost]
-    public async Task<ActionResult<Post>> CreatePost([FromBody] Post post)
+    public async Task<ActionResult<Post>> CreatePost([FromBody] Post newPost)
     {
         if (!ModelState.IsValid)
         {
             return BadRequest();
         }    
 
-        _blog.Posts.Add(post);
+        _blog.Posts.Add(newPost);
         await _blog.SaveChangesAsync();
         
         return NoContent();
@@ -57,25 +57,25 @@ public class PostsController : ControllerBase
 
     // PUT api/posts/5
     [HttpPut("{id}")]
-    public async Task<ActionResult> UpdatePost(int id, [FromBody] Post post)
+    public async Task<ActionResult> UpdatePost(int id, [FromBody] Post updatePost)
     {
         if (!ModelState.IsValid)
         {
             return BadRequest();
         }
 
-        var result = await _blog.Posts.FindAsync(id);
-        if (result == null)
+        var post = await _blog.Posts.FindAsync(id);
+        if (post == null)
         {
             return NotFound();
         }
 
-        result.Title = post.Title;
-        result.Content = post.Content;
-        result.Slug = post.Slug;
-        result.UpdatedDate = DateTime.Now;
+        post.Title = updatePost.Title;
+        post.Content = updatePost.Content;
+        post.Slug = updatePost.Slug;
+        post.UpdatedDate = DateTime.Now;
 
-        _blog.Posts.Update(result);
+        _blog.Posts.Update(post);
         await _blog.SaveChangesAsync();
 
         return NoContent();

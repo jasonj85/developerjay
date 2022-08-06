@@ -10,5 +10,5 @@ public class Category : BaseEntity
     public string Description { get; set; }
     [Required]
     public string Slug { get; set; }
-    public List<Post> PostsLinked { get; set; }
+    public List<Post> PostsLinked { get; set; } = new();
 }
