@@ -10,5 +10,5 @@ public class Tag : BaseEntity
     public string Description { get; set; }
     [Required]
     public string Slug { get; set; }
-    public List<PostTags> PostTags { get; set; }
+    public List<PostTags> PostTags { get; set; } = new();
 }

@@ -47,10 +47,10 @@ public class CategoriesController : ControllerBase
         if (!ModelState.IsValid)
         {
             return BadRequest();
-        }    
+        }
 
+        // update dates
         newCategory.CreatedDate = DateTime.Now;
-
         if (newCategory.Active)
         {
             newCategory.ActiveDate = DateTime.Now;
@@ -77,10 +77,19 @@ public class CategoriesController : ControllerBase
             return NotFound();
         }
 
+        // content
         category.Title = updateCategory.Title;
         category.Description = updateCategory.Description;
         category.Slug = updateCategory.Slug;
+
+        // update dates
         category.UpdatedDate = DateTime.Now;
+        if (category.Active == false && updateCategory.Active)
+        {
+            category.ActiveDate = DateTime.Now;
+        }
+        category.Active = updateCategory.Active;
+
 
         _blog.Categories.Update(category);
         await _blog.SaveChangesAsync();

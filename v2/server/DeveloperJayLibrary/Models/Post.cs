@@ -12,7 +12,7 @@ public class Post : BaseEntity
     public string Summary { get; set; }
     [Required]
     public string Content { get; set; }
-    public List<PostTags> PostTags { get; set; }
-    public List<PostCategories> PostCategories { get; set; }
-    public List<Comment> Comments { get; set; }
+    public List<PostTags> PostTags { get; set; } = new();
+    public List<PostCategories> PostCategories { get; set; } = new();
+    public List<Comment> Comments { get; set; } = new();
 }

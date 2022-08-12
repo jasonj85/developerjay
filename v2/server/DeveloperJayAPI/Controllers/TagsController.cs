@@ -20,9 +20,9 @@ public class TagsController : ControllerBase
 
     // GET: api/tags
     [HttpGet]
-    public async Task<ActionResult<List<Tag>>> GetTags()
+    public async Task<ActionResult<List<Tag>>> GetTags([FromQuery] bool active = true)
     {
-        var tags = await _blog.Tags.Where(t => t.Active == true).ToListAsync();
+        var tags = await _blog.Tags.Where(t => t.Active == active).ToListAsync();
         return Ok(tags);
     }
 
@@ -47,7 +47,14 @@ public class TagsController : ControllerBase
         if (!ModelState.IsValid)
         {
             return BadRequest();
-        }    
+        }
+
+        // update dates
+        newTag.CreatedDate = DateTime.Now;
+        if (newTag.Active)
+        {
+            newTag.ActiveDate = DateTime.Now;
+        }
 
         _blog.Tags.Add(newTag);
         await _blog.SaveChangesAsync();
@@ -70,10 +77,18 @@ public class TagsController : ControllerBase
             return NotFound();
         }
 
+        // content
         tag.Title = updateTag.Title;
         tag.Description = updateTag.Description;
         tag.Slug = updateTag.Slug;
+
+        // update dates
         tag.UpdatedDate = DateTime.Now;
+        if (tag.Active == false && updateTag.Active)
+        {
+            tag.ActiveDate = DateTime.Now;
+        }
+        tag.Active = updateTag.Active;
 
         _blog.Tags.Update(tag);
         await _blog.SaveChangesAsync();

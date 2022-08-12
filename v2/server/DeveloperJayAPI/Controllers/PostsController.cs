@@ -20,9 +20,9 @@ public class PostsController : ControllerBase
 
     // GET: api/posts
     [HttpGet]
-    public async Task<ActionResult<List<Post>>> GetPosts()
+    public async Task<ActionResult<List<Post>>> GetPosts([FromQuery] bool active = true)
     {
-        var posts = await _blog.Posts.Where(p => p.Active == true).ToListAsync();
+        var posts = await _blog.Posts.Where(p => p.Active == active).ToListAsync();
         return Ok(posts);
     }
 
@@ -47,7 +47,14 @@ public class PostsController : ControllerBase
         if (!ModelState.IsValid)
         {
             return BadRequest();
-        }    
+        }
+
+        // update dates
+        newPost.CreatedDate = DateTime.Now;
+        if (newPost.Active)
+        {
+            newPost.ActiveDate = DateTime.Now;
+        }
 
         _blog.Posts.Add(newPost);
         await _blog.SaveChangesAsync();
@@ -70,10 +77,29 @@ public class PostsController : ControllerBase
             return NotFound();
         }
 
+        // content
         post.Title = updatePost.Title;
         post.Content = updatePost.Content;
         post.Slug = updatePost.Slug;
+        post.Summary = updatePost.Summary;
+
+        // linked data
+        if (updatePost.PostCategories.Any())
+        {
+            post.PostCategories = updatePost.PostCategories;
+        }
+        if (updatePost.PostTags.Any())
+        {
+            post.PostTags = updatePost.PostTags;
+        }
+
+        // dates 
         post.UpdatedDate = DateTime.Now;
+        if (post.Active == false && updatePost.Active)
+        {
+            post.ActiveDate = DateTime.Now;
+        }
+        post.Active = updatePost.Active;
 
         _blog.Posts.Update(post);
         await _blog.SaveChangesAsync();
