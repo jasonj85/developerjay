@@ -77,7 +77,7 @@ const Hero = () => {
             </motion.span>
           </motion.div>
           <h1 className="text-center text-3xl font-bold tracking-wider text-gray-500 sm:text-2xl">
-            My name Jason James
+            My name is Jason James
           </h1>
           <p className="text-lg tracking-wider text-gray-700">I like web development 👨🏽‍💻</p>
         </div>

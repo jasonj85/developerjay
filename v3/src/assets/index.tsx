@@ -89,3 +89,20 @@ export const experienceData = [
 ];
 
 // End of Experience
+
+// Skills
+export const skillsData = [
+  {
+    name: 'CSS',
+    icon: '/skills/css.png',
+  },
+  {
+    name: 'JavaScript',
+    icon: '/skills/js.png',
+  },
+  {
+    name: 'TypeScript',
+    icon: '/skills/ts.png',
+  }
+]
+// End of Skills
