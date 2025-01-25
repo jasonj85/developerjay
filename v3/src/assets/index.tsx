@@ -106,3 +106,31 @@ export const skillsData = [
   }
 ]
 // End of Skills
+
+// Reviews
+import StarFillIcon from 'remixicon-react/StarFillIcon'
+import StarHalfLineIcon from 'remixicon-react/StarHalfLineIcon'
+import ArrowLeftSLineIcon from 'remixicon-react/ArrowLeftSLineIcon'
+import ArrowRightSLineIcon from 'remixicon-react/ArrowRightSLineIcon'
+
+export const starIcons = [<StarFillIcon />, <StarHalfLineIcon />]
+export const arrowIcons = [<ArrowLeftSLineIcon />, <ArrowRightSLineIcon />]
+
+export const reviewsData = [
+
+  {
+    image: '/reviews/client-1.png',
+    name: 'Dave Smith - Tech Lead',
+    comment:
+      "Here is the comment and review from Dave Smith",
+    stars: [1, 1, 1, 1, 0.5],
+  },
+  {
+    image: '/reviews/client-2.png',
+    name: 'Michelle Mcnamara - Sales Manager',
+    comment:
+      "Here is the comment and review from Michelle",
+    stars: [1, 1, 1, 1, 0.5],
+  },
+]
+// End of Reviews
