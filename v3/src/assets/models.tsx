@@ -1,4 +1,4 @@
-import { JSX } from 'react';
+import { JSX } from "react";
 
 export type ProjectDataModel = {
   name: string;
@@ -23,4 +23,16 @@ export type AboutDataModel = {
   title: string;
   amount: number;
   icon: JSX.Element;
+};
+
+export type PricingPlanModel = {
+  title: string;
+  pricing: string;
+  features: string[];
+  recommended: string;
+};
+
+export type QuestionDataModel = {
+  question: string;
+  answer: string;
 };
