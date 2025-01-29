@@ -47,7 +47,7 @@ const Question: React.FC<propTypes> = ({ question, index }) => {
           stiffness: show ? 250 : 50,
           opacity: { delay: show ? 0.2 : 0 },
         }}
-        className="pl-8 text-lg font-extralight tracking-wide text-gray-900 first-letter:pl-3"
+        className="pl-8 text-lg font-extralight tracking-wide text-gray-900 first-letter:pl-3 box-border origin-top"
       >
         {question.answer}
       </motion.p>

@@ -28,12 +28,16 @@ const Reviews = () => {
   };
 
   useEffect(() => {
-    direction ? leftClickHandler() : rightClickHandler();
+    if (direction) {
+      leftClickHandler();
+    } else {
+      rightClickHandler();
+    }
     prevIndex.current = index;
   }, [index]);
 
   return (
-    <div className="my-20 px-96">
+    <div id="reviews" className="my-20 px-96">
       <Heading text={"Reviews"} />
       <div className="flex flex-col items-center justify-center">
         <motion.div

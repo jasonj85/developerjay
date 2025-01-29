@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const PricingPlans = () => {
   return (
-    <div className="py-20 px-96">
+    <div id="pricing" className="py-20 px-96">
       <Heading text={"Pricing Plans"} />
       <div className="h-full flex lg:flex-col items-center justify-between gap-8">
         {pricingPlans.map((plan, i) => (

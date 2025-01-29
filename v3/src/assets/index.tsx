@@ -1,4 +1,12 @@
-import { ProjectDataModel, SkillDataModel, ExperienceDataModel, AboutDataModel, PricingPlanModel, QuestionDataModel } from "./models";
+import {
+  ProjectDataModel,
+  SkillDataModel,
+  ExperienceDataModel,
+  AboutDataModel,
+  PricingPlanModel,
+  QuestionDataModel,
+  NavBarDataModel,
+} from "./models";
 
 // Hero
 import InstagramLineIcon from "remixicon-react/InstagramLineIcon";
@@ -161,71 +169,133 @@ export const projectsButton: string[] = ["All", "HTML", "CSS", "JavaScript", "Re
 // Pricing Plans
 export const pricingPlans: PricingPlanModel[] = [
   {
-    title: 'Basic',
-    pricing: '£200 - $500',
+    title: "Basic",
+    pricing: "£200 - $500",
     features: [
-      'Up to 5 pages',
-      'Responsive design ',
-      'Basic SEO ',
-      'Contact form',
-      'Social media links',
-      '1 month support',
+      "Up to 5 pages",
+      "Responsive design ",
+      "Basic SEO ",
+      "Contact form",
+      "Social media links",
+      "1 month support",
     ],
-    recommended: 'Small businesses & personal blogs',
+    recommended: "Small businesses & personal blogs",
   },
   {
-    title: 'Premium',
-    pricing: '$5,000 - $10,000',
+    title: "Premium",
+    pricing: "$5,000 - $10,000",
     features: [
-      'Unlimited pages',
-      'Responsive design',
-      'Comprehensive SEO',
-      'Contact forms',
-      'Social media links',
-      'Advanced security',
-      'E-commerce (unlimited products)',
-      'Blog setup',
-      'Google Analytics with custom reports',
-      '6 months support',
+      "Unlimited pages",
+      "Responsive design",
+      "Comprehensive SEO",
+      "Contact forms",
+      "Social media links",
+      "Advanced security",
+      "E-commerce (unlimited products)",
+      "Blog setup",
+      "Google Analytics with custom reports",
+      "6 months support",
     ],
-    recommended: 'Large businesses & complex e-commerce sites, custom web applications'
+    recommended: "Large businesses & complex e-commerce sites, custom web applications",
   },
   {
-    title: 'Standard',
-    pricing: '$1,500 - $3,000',
+    title: "Standard",
+    pricing: "$1,500 - $3,000",
     features: [
-      'Up to 10 pages',
-      'Responsive design',
-      'Advanced SEO',
-      'Contact form',
-      'Social media links',
-      'E-commerce (20 products)',
-      'Blog setup',
-      'Google Analytics',
-      '3 months support',
+      "Up to 10 pages",
+      "Responsive design",
+      "Advanced SEO",
+      "Contact form",
+      "Social media links",
+      "E-commerce (20 products)",
+      "Blog setup",
+      "Google Analytics",
+      "3 months support",
     ],
-    recommended: 'Medium-sized businesses & online stores',
+    recommended: "Medium-sized businesses & online stores",
   },
-]
+];
 
-import CheckLineIcon from 'remixicon-react/CheckLineIcon'
-export const checkIcon = <CheckLineIcon />
+import CheckLineIcon from "remixicon-react/CheckLineIcon";
+export const checkIcon = <CheckLineIcon />;
 // End of pricing plans
 
 // Q&A section
-export const questions : QuestionDataModel[] = [
+export const questions: QuestionDataModel[] = [
   {
-    question: 'How much do you charge for your services?',
-    answer:
-      'This is an example amount of how much I would charge for my services.',
+    question: "How much do you charge for your services?",
+    answer: "This is an example amount of how much I would charge for my services.",
   },
   {
-    question: 'What is your experience with front end work and back end work?',
+    question: "What is your experience with front end work and back end work?",
     answer:
-      'My univeristy degree was in computer graphics and focused more on front end skills, but over time I have progressed to more back end tasks, so right now I have a good blend of both',
+      "My univeristy degree was in computer graphics and focused more on front end skills, but over time I have progressed to more back end tasks, so right now I have a good blend of both",
   },
-]
+];
 
-import ArrowDropDownLineIcon from 'remixicon-react/ArrowDropDownLineIcon'
-export const questionArrow = <ArrowDropDownLineIcon />
+import ArrowDropDownLineIcon from "remixicon-react/ArrowDropDownLineIcon";
+export const questionArrow = <ArrowDropDownLineIcon />;
 // End of Q&A section
+
+// Navbar
+import Home5LineIcon from "remixicon-react/Home5LineIcon";
+import UserLineIcon from "remixicon-react/UserLineIcon";
+import HistoryLineIcon from "remixicon-react/HistoryLineIcon";
+import BriefcaseLineIcon from "remixicon-react/BriefcaseLineIcon";
+import UserStarLineIcon from "remixicon-react/UserStarLineIcon";
+import ProjectorLineIcon from "remixicon-react/ProjectorLineIcon";
+import PriceTag3LineIcon from "remixicon-react/PriceTag3LineIcon";
+import ContactsBook2LineIcon from "remixicon-react/ContactsBook2LineIcon";
+import QuestionAnswerLineIcon from "remixicon-react/QuestionAnswerLineIcon";
+import CopyrightLineIcon from "remixicon-react/CopyrightLineIcon";
+
+export const copyRightIcon = <CopyrightLineIcon />;
+export const navbarData: NavBarDataModel[] = [
+  {
+    id: "home",
+    name: "Home",
+    icon: <Home5LineIcon />,
+  },
+  {
+    id: "about",
+    name: "About",
+    icon: <UserLineIcon />,
+  },
+  {
+    id: "experience",
+    name: "Experience",
+    icon: <HistoryLineIcon />,
+  },
+  {
+    id: "skills",
+    name: "Skills",
+    icon: <BriefcaseLineIcon />,
+  },
+  {
+    id: "reviews",
+    name: "Reviews",
+    icon: <UserStarLineIcon />,
+  },
+  {
+    id: "projects",
+    name: "Projects",
+    icon: <ProjectorLineIcon />,
+  },
+  {
+    id: "pricing",
+    name: "Pricing",
+    icon: <PriceTag3LineIcon />,
+  },
+  {
+    id: "contact",
+    name: "Contact",
+    icon: <ContactsBook2LineIcon />,
+  },
+  {
+    id: "questions",
+    name: "Questions",
+    icon: <QuestionAnswerLineIcon />,
+  },
+];
+
+// End of navbar

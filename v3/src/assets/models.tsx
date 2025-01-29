@@ -36,3 +36,9 @@ export type QuestionDataModel = {
   question: string;
   answer: string;
 };
+
+export type NavBarDataModel = {
+  id: string;
+  name: string;
+  icon: JSX.Element;
+};

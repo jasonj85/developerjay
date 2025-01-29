@@ -22,7 +22,7 @@ const Experience = () => {
   });
 
   return (
-    <div className="py-20 px-96 relative">
+    <div id="experience" className="py-20 px-96 relative">
       <Heading text={"Experience & Education"} />
       <Image
         src={"/education.png"}
