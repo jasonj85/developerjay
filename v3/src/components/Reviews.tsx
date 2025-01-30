@@ -37,7 +37,7 @@ const Reviews = () => {
   }, [index]);
 
   return (
-    <div id="reviews" className="my-20 px-96">
+    <div id="reviews" className="my-20">
       <Heading text={"Reviews"} />
       <div className="flex flex-col items-center justify-center">
         <motion.div

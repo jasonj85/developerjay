@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <div id="contact" className="h-screen py-20 px-96">
+    <div id="contact" className="py-20">
       <Heading text={"Contact me"} />
-      <div className="w-full h-full my-auto flex lg:flex-col items-center justify-between lg:justify-center gap-x-20 lg:gap-x-0 gap-y-20">
+      <div className="w-full my-auto flex lg:flex-col items-center justify-between lg:justify-center gap-x-20 lg:gap-x-0 gap-y-20">
         <motion.div
           initial={{ opacity: 0, y: 150 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -33,7 +33,7 @@ const Contact = () => {
           <div className="w-full flex lg:flex-col gap-x-3">
             <input
               type="text"
-              className="w-full border border-yellow-500 rounded-md bg-zinc-100 px-4 py-2 text-sm tracking-wider text-gray-200 outline-none mb-2"
+              className="w-full border border-yellow-500 rounded-md bg-zinc-100 px-4 py-2 text-sm tracking-wider text-gray-200 outline-none"
               placeholder="Your Name"
             />
             <input

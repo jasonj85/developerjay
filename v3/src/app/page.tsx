@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <NavBar />
-      <div>
+      <div className="max-w-[1000px] pl-32">
         <Hero />
         <About />
         <Experience />

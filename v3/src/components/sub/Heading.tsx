@@ -5,7 +5,7 @@ interface propTypes {
 }
 
 const Heading: React.FC<propTypes> = ({ text }) => {
-  return <h1 className="text-3xl sm:text-2xl font-bold text-gray-600 mb-14 self-start">{text}</h1>;
+  return <h1 className="text-3xl sm:text-2xl font-bold text-gray-600 mb-14 self-start block">{text}</h1>;
 };
 
 export default Heading;

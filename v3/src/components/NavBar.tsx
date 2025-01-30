@@ -7,14 +7,14 @@ const NavBar = () => {
   const dateYear = new Date().getFullYear();
 
   return (
-    <div className="w-[70px] h-full fixed left-0 top-0 flex flex-col justify-between border-r border-gray-200 px-4 py-4 z-10">
+    <div id="navbar" className="w-[70px] h-full fixed left-0 top-0 flex flex-col justify-between border-r border-gray-200 px-4 py-4 z-10">
       <a href="#home">
         <span className="text-xl font-semibold text-red-400">Dev</span>.
         <span className="block w-min origin-bottom text-[12px] font-semibold">Jay</span>
       </a>
       <div className="flex flex-col gap-y-3 sm:gap-y-2">
         {navbarData.map((nav, i) => (
-          <a key={i} href={"#" + nav.id} className="group flex flex-col items-center gap-y-2">
+          <a key={i} href={"/#" + nav.id} className="group flex flex-col items-center gap-y-2">
             <span className="text-2xl text-yellow-500 group-hover:scale-125 transition-all">
               {nav.icon}
             </span>

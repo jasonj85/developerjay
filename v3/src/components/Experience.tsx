@@ -22,14 +22,14 @@ const Experience = () => {
   });
 
   return (
-    <div id="experience" className="py-20 px-96 relative">
+    <div id="experience" className="py-20 relative">
       <Heading text={"Experience & Education"} />
       <Image
         src={"/education.png"}
         alt={"Experience image"}
         width={300}
         height={300}
-        className="absolute -top-4 right-96 opacity-70 lg:hidden"
+        className="absolute -top-4 right-0 opacity-70 lg:hidden"
       />
       <div
         ref={containerRef}
@@ -38,10 +38,10 @@ const Experience = () => {
         {experienceData.map((data, i) => (
           <div
             key={i}
-            className={`w-[600px] xl:w-[480px] sm:w-full px-12 sm:px-0 relative ${
+            className={`w-[400px] xl:w-[400px] sm:w-full px-4 sm:px-0 relative bg-white z-2 ${
               i % 2 === 0
-                ? "-left-[300px] xl:-left-[240px] lg:left-0"
-                : "left-[300px] xl:-left-[240px] lg:left-0"
+                ? "-left-[210px] xl:-left-[240px] lg:left-0"
+                : "left-[210px] xl:-left-[240px] lg:left-0"
             }`}
           >
             <motion.div
@@ -89,7 +89,7 @@ const Experience = () => {
         <motion.div
           initial={{ scaleY: 0 }}
           style={{ scaleY: scrollY }}
-          className="absolute w-1 h-full rounded-full bg-gray-300 origin-top pb-20"
+          className="absolute w-1 h-full rounded-full bg-gray-300 origin-top pb-20 -z-1"
         ></motion.div>
       </div>
     </div>
