@@ -1,5 +1,10 @@
 import { JSX } from "react";
 
+export type HeroIconDataModel = {
+  title: string;
+  icon: JSX.Element;
+};
+
 export type ProjectDataModel = {
   name: string;
   desc: string;

@@ -20,7 +20,7 @@ const Contact = () => {
             alt="Contact me image"
             width={400}
             height={400}
-            className="w-[400px] rounded-md opacity-80 transform -scale-x-100"
+            className="w-[400px] rounded-md opacity-90 transform -scale-x-100"
           />
         </motion.div>
         <motion.form
@@ -30,7 +30,7 @@ const Contact = () => {
           viewport={{ once: true }}
           className="w-[600px] lg:w-[400px] sm:w-full flex flex-col gap-3"
         >
-          <div className="w-full flex lg:flex-col gap-x-3">
+          <div className="w-full flex lg:flex-col gap-x-3 gap-y-3">
             <input
               type="text"
               className="w-full border border-yellow-500 rounded-md bg-zinc-100 px-4 py-2 text-sm tracking-wider text-gray-200 outline-none"

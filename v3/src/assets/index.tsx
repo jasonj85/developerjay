@@ -6,22 +6,23 @@ import {
   PricingPlanModel,
   QuestionDataModel,
   NavBarDataModel,
+  HeroIconDataModel,
 } from "./models";
 
 // Hero
-import InstagramLineIcon from "remixicon-react/InstagramLineIcon";
-import FacebookCircleLineIcon from "remixicon-react/FacebookCircleLineIcon";
-import DribbbleLineIcon from "remixicon-react/DribbbleLineIcon";
-import YoutubeLineIcon from "remixicon-react/YoutubeLineIcon";
 import GithubLineIcon from "remixicon-react/GithubLineIcon";
+import LinkedInIcon from "remixicon-react/LinkedinBoxLineIcon";
 
 /* eslint-disable react/jsx-key */
-export const heroIcons = [
-  <InstagramLineIcon />,
-  <FacebookCircleLineIcon />,
-  <DribbbleLineIcon />,
-  <YoutubeLineIcon />,
-  <GithubLineIcon />,
+export const heroIcons: HeroIconDataModel[] = [
+  {
+    title: "LinkedIn",
+    icon: <LinkedInIcon />,
+  },
+  {
+    title: "Github",
+    icon: <GithubLineIcon />,
+  },
 ];
 
 // About Me
@@ -183,7 +184,7 @@ export const pricingPlans: PricingPlanModel[] = [
   },
   {
     title: "Premium",
-    pricing: "$5,000 - $10,000",
+    pricing: "£5,000 - £10,000",
     features: [
       "Unlimited pages",
       "Responsive design",
@@ -200,7 +201,7 @@ export const pricingPlans: PricingPlanModel[] = [
   },
   {
     title: "Standard",
-    pricing: "$1,500 - $3,000",
+    pricing: "£1,500 - £3,000",
     features: [
       "Up to 10 pages",
       "Responsive design",
@@ -299,3 +300,11 @@ export const navbarData: NavBarDataModel[] = [
 ];
 
 // End of navbar
+
+// Toggle
+import MoonFoggyFillIcon from "remixicon-react/MoonFoggyFillIcon";
+import SunFoggyFillIcon from "remixicon-react/SunFoggyFillIcon";
+
+export const sunIcon = <SunFoggyFillIcon />;
+export const moonIcon = <MoonFoggyFillIcon />;
+// End of Toggle button

@@ -29,7 +29,7 @@ const Experience = () => {
         alt={"Experience image"}
         width={300}
         height={300}
-        className="absolute -top-4 right-0 opacity-70 lg:hidden"
+        className="absolute -top-4 right-0 opacity-90 lg:hidden"
       />
       <div
         ref={containerRef}
@@ -38,25 +38,25 @@ const Experience = () => {
         {experienceData.map((data, i) => (
           <div
             key={i}
-            className={`w-[400px] xl:w-[400px] sm:w-full px-4 sm:px-0 relative bg-white z-2 ${
+            className={`w-[400px] xl:w-[400px] sm:w-full sm:px-0 relative z-10 ${
               i % 2 === 0
-                ? "-left-[210px] xl:-left-[240px] lg:left-0"
-                : "left-[210px] xl:-left-[240px] lg:left-0"
+                ? "-left-[225px] xl:-left-[240px] lg:left-0"
+                : "left-[225px] xl:-left-[240px] lg:left-0"
             }`}
           >
             <motion.div
               initial={{ opacity: 0, x: i % 2 === 0 ? -80 : 80 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 0.97, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, type: "spring", stiffness: 50 }}
-              className="relative flex flex-col gap-y-3 rounded-md border border-red-200 bg-white p-4 tracking-wide sm:text-sm"
+              className="relative flex flex-col gap-y-3 rounded-md border border-red-200 bg-white p-4 tracking-wide sm:text-sm z-10 dark:bg-zinc-700 transition-colors"
             >
-              <h1 className="text-xl sm:text-lg font-light text-gray-700">{data.title}</h1>
-              <p className="text-gray-500">
+              <h1 className="text-xl sm:text-lg font-light text-gray-700 dark:text-white">{data.title}</h1>
+              <p className="text-gray-500 dark:text-gray-100">
                 <span className="block font-light">Education:</span>
                 <span className="block pl-2 font-extralight">{data.education}</span>
               </p>
-              <div className="text-gray-800">
+              <div className="text-gray-800 dark:text-gray-200 transition-colors">
                 <span className="font-light">Experience:</span>
                 <ul className="pl-2">
                   {data.experience.map((exp, j) => (
@@ -74,11 +74,11 @@ const Experience = () => {
               </span>
             </motion.div>
             <div
-              className={`absolute top-20 w-14 border border-gray-400 rounded-full aspect-square grid place-items-center text-red-400 font-light -translate-y-1/2 z-10 bg-gray-100
+              className={`absolute -top-2.5 w-14 border border-gray-400 rounded-full aspect-square grid place-items-center text-red-400 font-light -translate-y-1/2 z-10 bg-gray-100
                 ${
                   i % 2 === 0
-                    ? "left-full -translate-x-1/2 lg:left-1/2"
-                    : "right-full translate-x-1/2 lg:right-1/2 "
+                    ? "left-1/2 -translate-x-1/2 lg:left-1/2"
+                    : "right-1/2 translate-x-1/2 lg:right-1/2 "
                 }`}
             >
               {dateYear - experienceData.length + i + 1}
@@ -89,8 +89,9 @@ const Experience = () => {
         <motion.div
           initial={{ scaleY: 0 }}
           style={{ scaleY: scrollY }}
-          className="absolute w-1 h-full rounded-full bg-gray-300 origin-top pb-20 -z-1"
-        ></motion.div>
+          className="absolute w-1 h-[85%] rounded-full bg-gray-400 origin-top pb-20 z-0"
+        >
+        </motion.div>
       </div>
     </div>
   );

@@ -15,13 +15,13 @@ const About = () => {
           alt="About me image"
           width={400}
           height={400}
-          className="flex w-[300px] lg:w-[200px] md:hidden"
+          className="flex w-[300px] lg:w-[200px] md:hidden opacity-90"
         />
-        <div className="max-w-[800px] rounded-xl bg-zinc-100 p-5 text-justify">
-          <span className="absolute -left-5 top-20 scale-[2.5] text-zinc-100 md:hidden">
+        <div className="max-w-[800px] rounded-xl bg-zinc-100 p-5 text-justify dark:bg-zinc-700 transition-colors">
+          <span className="absolute -left-5 top-20 scale-[2.5] text-zinc-100 md:hidden dark:bg-zinc-700 transition-colors">
             {arrowLeftIcon}
           </span>
-          <p className="text-lg font-light text-gray-700 first-letter:pl-3 lg:text-[16px] sm:text-[14px]">
+          <p className="text-lg font-light text-gray-700 first-letter:pl-3 lg:text-[16px] sm:text-[14px] dark:text-white">
             {aboutText}
           </p>
           <a

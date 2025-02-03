@@ -25,7 +25,7 @@ const Projects = () => {
   return (
     <div id="projects" className="min-h-screen py-20">
       <Heading text={"Projects"} />
-      <div className="flex flex-wrap items-center justify-between gap-4 py-10">
+      <div className="flex flex-wrap items-center gap-4 py-10 mx-2">
         {projectsButton.map((project, i) => (
           <motion.button
             key={i}
@@ -37,7 +37,7 @@ const Projects = () => {
               setIndex(i);
               setTech(project)
             }}
-            className="border border-yellow-500 rounded-xl px-2 py-1 text-sm font-light tracking-wider text-gray-400"
+            className="border border-yellow-500 rounded-xl px-2 py-1 text-sm font-light tracking-wider text-gray"
           >
             {project}
           </motion.button>

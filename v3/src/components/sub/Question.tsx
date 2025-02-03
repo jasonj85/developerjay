@@ -3,12 +3,12 @@ import { questionArrow } from "@/assets";
 import { QuestionDataModel } from "@/assets/models";
 import { motion } from "framer-motion";
 
-interface propTypes {
+interface PropTypes {
   question: QuestionDataModel;
   index: number;
 }
 
-const Question: React.FC<propTypes> = ({ question, index }) => {
+const Question: React.FC<PropTypes> = ({ question, index }) => {
   const [show, setShow] = useState(index === 0 ? true : false);
 
   return (
@@ -31,8 +31,8 @@ const Question: React.FC<propTypes> = ({ question, index }) => {
     >
       <h1
         onClick={() => setShow(!show)}
-        className={`flex items-center text-xl font-extralight tracking-wide cursor-pointer text-gray-800 hover:text-red-600
-          ${show && "border-b text-yellow-500"}
+        className={`flex items-center text-xl font-extralight tracking-wide cursor-pointer text-gray-800 hover:text-yellow-600 dark:text-white transition-colors dark:hover:text-yellow-600
+          ${show && "border-b text-yellow-500 dark:text-yellow-500"}
           `}
       >
         <motion.span animate={{ rotate: show ? 180 : 0 }}>{questionArrow}</motion.span>
@@ -47,7 +47,7 @@ const Question: React.FC<propTypes> = ({ question, index }) => {
           stiffness: show ? 250 : 50,
           opacity: { delay: show ? 0.2 : 0 },
         }}
-        className="pl-8 text-lg font-extralight tracking-wide text-gray-900 first-letter:pl-3 box-border origin-top"
+        className="pl-8 text-lg font-extralight tracking-wide text-gray-900 first-letter:pl-3 box-border origin-top transition-colors dark:text-gray-200"
       >
         {question.answer}
       </motion.p>

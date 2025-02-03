@@ -1,13 +1,13 @@
 import { ReactNode } from "react";
 import { motion, useMotionValue } from "framer-motion";
 
-interface propTypes {
+interface PropTypes {
   title: string;
   amount: number;
   children: ReactNode;
 }
 
-const Achievements: React.FC<propTypes> = ({ title, amount, children }) => {
+const Achievements: React.FC<PropTypes> = ({ title, amount, children }) => {
   const number = useMotionValue(0);
 
   const count = (amount: number) => {
@@ -36,7 +36,7 @@ const Achievements: React.FC<propTypes> = ({ title, amount, children }) => {
         >
           {number}
         </motion.span>
-        <span className="text-sm tracking-wide text-gray-500">{title}</span>
+        <span className="text-sm tracking-wide text-gray-500 dark:text-white transition-colors">{title}</span>
       </h1>
     </div>
   );

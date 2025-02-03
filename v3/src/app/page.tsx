@@ -1,3 +1,4 @@
+"use client";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Experience from "@/components/Experience";
@@ -8,22 +9,50 @@ import PricingPlans from "@/components/PricingPlans";
 import Contact from "@/components/Contact";
 import Questions from "@/components/Questions";
 import NavBar from "@/components/NavBar";
+import { useEffect, useRef, useState } from "react";
+import Toggle from "@/components/sub/Toggle";
 
 export default function Home() {
+  const [id, setId] = useState("");
+  const compsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const intersecting = entry.isIntersecting;
+          if (intersecting) {
+            setId(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    if (compsRef?.current?.children) {
+      const compsArr = Array.from(compsRef.current.children);
+      compsArr.forEach((comp) => {
+        observer.observe(comp as Element);
+      });
+    }
+  }, []);
+
   return (
     <>
-      <NavBar />
-      <div className="max-w-[1000px] pl-32">
-        <Hero />
-        <About />
-        <Experience />
-        <Skills />
-        <Reviews />
-        <Projects />
-        <PricingPlans />
-        <Contact />
-        <Questions />
-      </div>
+      <Toggle>
+        <NavBar id={id} />
+        <div ref={compsRef}>
+          <Hero />
+          <About />
+          <Experience />
+          <Skills />
+          <Reviews />
+          <Projects />
+          <PricingPlans />
+          <Contact />
+          <Questions />
+        </div>
+      </Toggle>
     </>
   );
 }
