@@ -11,6 +11,7 @@ import Questions from "@/components/Questions";
 import NavBar from "@/components/NavBar";
 import { useEffect, useRef, useState } from "react";
 import Toggle from "@/components/sub/Toggle";
+import Load from "@/components/sub/Load";
 
 export default function Home() {
   const [id, setId] = useState("");
@@ -39,6 +40,7 @@ export default function Home() {
 
   return (
     <>
+      <Load />
       <Toggle>
         <NavBar id={id} />
         <div ref={compsRef}>

@@ -33,7 +33,7 @@ const Experience = () => {
       />
       <div
         ref={containerRef}
-        className="w-full h-full flex flex-col items-center justofy-center gap-y-10 lg:gap-y-20 py-10"
+        className="relative w-full h-full flex flex-col items-center justofy-center gap-y-10 lg:gap-y-20 py-10"
       >
         {experienceData.map((data, i) => (
           <div
@@ -67,7 +67,7 @@ const Experience = () => {
                 </ul>
               </div>
               <span
-                className={`absolute top-20 text-red-300 -translate-y-1/2
+                className={`absolute top-20 text-red-300 -translate-y-1/2 lg:hidden
                 ${i % 2 === 0 ? "left-full rotate-180" : "right-full"}`}
               >
                 {arrowLeftIcon}
@@ -89,7 +89,7 @@ const Experience = () => {
         <motion.div
           initial={{ scaleY: 0 }}
           style={{ scaleY: scrollY }}
-          className="absolute w-1 h-[85%] rounded-full bg-gray-400 origin-top pb-20 z-0"
+          className="absolute w-1 h-[97%] rounded-full bg-gray-400 origin-top pb-20 z-0"
         >
         </motion.div>
       </div>

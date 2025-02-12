@@ -58,7 +58,7 @@ const Toggle: React.FC<PropTypes> = ({ children }) => {
                 reactLocalStorage.set("darkTheme", false);
               }
             }}
-            className="fixed right-14 sm:right-10 top-10 text-yellow-600 hover:text-yellow-600"
+            className="fixed right-14 sm:right-10 top-10 text-yellow-600 hover:text-yellow-600 z-40"
           >
             <span className="absolute block rounded-full bg-zinc-50 p-1 text-4xl dark:bg-zinc-800">
               {darkMode ? sunIcon : moonIcon}

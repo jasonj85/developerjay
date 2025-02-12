@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <div id="contact" className="py-20">
+    <div id="contact" className="py-20 h-screen lg:h-auto lg:py-40 xs:pb-20">
       <Heading text={"Contact me"} />
       <div className="w-full my-auto flex lg:flex-col items-center justify-between lg:justify-center gap-x-20 lg:gap-x-0 gap-y-20">
         <motion.div
@@ -30,7 +30,7 @@ const Contact = () => {
           viewport={{ once: true }}
           className="w-[600px] lg:w-[400px] sm:w-full flex flex-col gap-3"
         >
-          <div className="w-full flex lg:flex-col gap-x-3 gap-y-3">
+          <div className="w-full flex lg:flex-col gap-x-3 lg:gap-y-3">
             <input
               type="text"
               className="w-full border border-yellow-500 rounded-md bg-zinc-100 px-4 py-2 text-sm tracking-wider text-gray-200 outline-none"

@@ -47,7 +47,12 @@ const Hero = () => {
       onMouseEnter={handleMouseEnter}
     >
       <div>
-        <div className="flex flex-col items-center justify-center gap-y-3 font-light">
+        <motion.div
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
+          className="flex flex-col items-center justify-center gap-y-3 font-light"
+        >
           <motion.div
             className="flex items-center justify-center"
             style={{
@@ -80,9 +85,16 @@ const Hero = () => {
           <h1 className="text-center text-3xl font-bold tracking-wider text-gray-500 sm:text-2xl dark:text-white transition-colors">
             My name is Jason James
           </h1>
-          <p className="text-lg tracking-wider text-gray-700 dark:text-gray-200 transition-colors">I like web development 👨🏽‍💻</p>
-        </div>
-        <div className="mt-8 flex justify-center gap-x-10 text-3xl text yellow-600 sm:text-2xl">
+          <p className="text-lg tracking-wider text-gray-700 dark:text-gray-200 transition-colors">
+            I like web development 👨🏽‍💻
+          </p>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
+          className="mt-8 flex justify-center gap-x-10 text-3xl text yellow-600 sm:text-2xl"
+        >
           {heroIcons.map((icon, i) => (
             <a
               href="#"
@@ -93,16 +105,21 @@ const Hero = () => {
               {icon.icon}
             </a>
           ))}
-        </div>
-        <div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.7 }}
+        >
           <a
             href="#"
             className="mt-7 block w-max rounded-lg bg-red-400 px-3 py-1 font-light capitalize tracking-wider mx-auto text-white hover:bg-red-500 transition-colors"
-            onMouseEnter={() => setButtonHover(true)} onMouseLeave={() => setButtonHover(false)}
+            onMouseEnter={() => setButtonHover(true)}
+            onMouseLeave={() => setButtonHover(false)}
           >
             Talk to me
           </a>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
