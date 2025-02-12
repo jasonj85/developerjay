@@ -13,9 +13,17 @@ export type ProjectDataModel = {
   tech: string[];
 };
 
+export enum SkillLevel {
+  Basic = "basic",
+  Intermediate = "intermediate",
+  Advanced = "advanced",
+}
+
 export type SkillDataModel = {
   name: string;
   icon: string;
+  exp: number;
+  level: SkillLevel
 };
 
 export type ExperienceDataModel = {

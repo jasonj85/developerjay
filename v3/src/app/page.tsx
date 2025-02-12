@@ -46,11 +46,9 @@ export default function Home() {
         <div ref={compsRef}>
           <Hero />
           <About />
-          <Experience />
           <Skills />
-          <Reviews />
+          <Experience />
           <Projects />
-          <PricingPlans />
           <Contact />
           <Questions />
         </div>

@@ -7,6 +7,7 @@ import {
   QuestionDataModel,
   NavBarDataModel,
   HeroIconDataModel,
+  SkillLevel,
 } from "./models";
 
 // Hero
@@ -18,40 +19,189 @@ export const heroIcons: HeroIconDataModel[] = [
   {
     title: "LinkedIn",
     icon: <LinkedInIcon />,
-    url: "https://www.linkedin.com/in/developerjay/"
+    url: "https://www.linkedin.com/in/developerjay/",
   },
   {
     title: "Github",
     icon: <GithubLineIcon />,
-    url: "https://github.com/developerjayuk"
+    url: "https://github.com/developerjayuk",
   },
 ];
+
+// Skills - updated: Feb 2025
+export const skillsData: SkillDataModel[] = [
+  {
+    name: "CSS",
+    icon: "/skills/css.svg",
+    exp: 20,
+    level: SkillLevel.Advanced,
+  },
+  {
+    name: "JavaScript",
+    icon: "/skills/js.svg",
+    exp: 20,
+    level: SkillLevel.Advanced,
+  },
+  {
+    name: "Angular",
+    icon: "/skills/angular.svg",
+    exp: 7,
+    level: SkillLevel.Intermediate,
+  },
+  {
+    name: "AWS",
+    icon: "/skills/aws.svg",
+    exp: 7,
+    level: SkillLevel.Intermediate,
+  },
+  {
+    name: "TypeScript",
+    icon: "/skills/ts.svg",
+    exp: 10,
+    level: SkillLevel.Advanced,
+  },
+  {
+    name: "Azure",
+    icon: "/skills/azure.svg",
+    exp: 6,
+    level: SkillLevel.Intermediate,
+  },
+  {
+    name: "C#",
+    icon: "/skills/cs.svg",
+    exp: 15,
+    level: SkillLevel.Advanced,
+  },
+  {
+    name: "Docker Desktop",
+    icon: "/skills/docker.svg",
+    exp: 2,
+    level: SkillLevel.Basic,
+  },
+  {
+    name: ".Net",
+    icon: "/skills/dotnet.svg",
+    exp: 15,
+    level: SkillLevel.Advanced,
+  },
+  {
+    name: "Elastic Search",
+    icon: "/skills/elasticsearch.svg",
+    exp: 1,
+    level: SkillLevel.Basic,
+  },
+  {
+    name: "Git",
+    icon: "/skills/git.svg",
+    exp: 12,
+    level: SkillLevel.Advanced,
+  },
+  {
+    name: "GraphQL",
+    icon: "/skills/graphql.svg",
+    exp: 1,
+    level: SkillLevel.Basic,
+  },
+  {
+    name: "HTML",
+    icon: "/skills/html.svg",
+    exp: 20,
+    level: SkillLevel.Advanced,
+  },
+  {
+    name: "Jenkins",
+    icon: "/skills/jenkins.svg",
+    exp: 1,
+    level: SkillLevel.Basic,
+  },
+  {
+    name: "Jest",
+    icon: "/skills/jest.svg",
+    exp: 1,
+    level: SkillLevel.Basic,
+  },
+  {
+    name: "JQuery",
+    icon: "/skills/jquery.svg",
+    exp: 10,
+    level: SkillLevel.Intermediate,
+  },
+  {
+    name: "MongoDB",
+    icon: "/skills/mongodb.svg",
+    exp: 2,
+    level: SkillLevel.Basic,
+  },
+  {
+    name: "NextJS",
+    icon: "/skills/nextjs.svg",
+    exp: 2,
+    level: SkillLevel.Intermediate,
+  },
+  {
+    name: "NodeJs",
+    icon: "/skills/nodejs.svg",
+    exp: 8,
+    level: SkillLevel.Advanced,
+  },
+  {
+    name: "Python",
+    icon: "/skills/python.svg",
+    exp: 1,
+    level: SkillLevel.Basic,
+  },
+  {
+    name: "React",
+    icon: "/skills/react.svg",
+    exp: 8,
+    level: SkillLevel.Advanced,
+  },
+  {
+    name: "Redux",
+    icon: "/skills/redux.svg",
+    exp: 8,
+    level: SkillLevel.Advanced,
+  },
+  {
+    name: "SQL",
+    icon: "/skills/sql.svg",
+    exp: 12,
+    level: SkillLevel.Advanced,
+  },
+  {
+    name: "Tailwind",
+    icon: "/skills/tailwind.svg",
+    exp: 2,
+    level: SkillLevel.Advanced,
+  },
+  {
+    name: "Vue",
+    icon: "/skills/vue.svg",
+    exp: 4,
+    level: SkillLevel.Advanced,
+  },
+].sort((a, b) => b.exp - a.exp);
+// End of Skills
 
 // About Me
 import GithubFillIcon from "remixicon-react/GithubFillIcon";
 import Projector2LineIcon from "remixicon-react/Projector2LineIcon";
-import GroupLineIcon from "remixicon-react/GroupLineIcon";
 import AwardFillIcon from "remixicon-react/AwardFillIcon";
 
 export const aboutData: AboutDataModel[] = [
   {
-    title: "Github Repos",
-    amount: 123,
-    icon: <GithubFillIcon />,
-  },
-  {
-    title: "Successful Projects",
-    amount: 123,
+    title: "Successful Hobby Projects",
+    amount: 34,
     icon: <Projector2LineIcon />,
   },
   {
-    title: "Satisfied clients",
-    amount: 123,
-    icon: <GroupLineIcon />,
+    title: "Github Repos",
+    amount: 50,
+    icon: <GithubFillIcon />,
   },
   {
-    title: "Awards and Recognition",
-    amount: 123,
+    title: "Developer Skills",
+    amount: skillsData.length,
     icon: <AwardFillIcon />,
   },
 ];
@@ -101,23 +251,6 @@ export const experienceData: ExperienceDataModel[] = [
 ];
 
 // End of Experience
-
-// Skills
-export const skillsData: SkillDataModel[] = [
-  {
-    name: "CSS",
-    icon: "/skills/css.png",
-  },
-  {
-    name: "JavaScript",
-    icon: "/skills/js.png",
-  },
-  {
-    name: "TypeScript",
-    icon: "/skills/ts.png",
-  },
-];
-// End of Skills
 
 // Reviews
 import StarFillIcon from "remixicon-react/StarFillIcon";
