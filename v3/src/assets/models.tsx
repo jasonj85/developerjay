@@ -3,6 +3,7 @@ import { JSX } from "react";
 export type HeroIconDataModel = {
   title: string;
   icon: JSX.Element;
+  url: string;
 };
 
 export type ProjectDataModel = {

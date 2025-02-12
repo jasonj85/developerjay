@@ -18,10 +18,12 @@ export const heroIcons: HeroIconDataModel[] = [
   {
     title: "LinkedIn",
     icon: <LinkedInIcon />,
+    url: "https://www.linkedin.com/in/developerjay/"
   },
   {
     title: "Github",
     icon: <GithubLineIcon />,
+    url: "https://github.com/developerjayuk"
   },
 ];
 

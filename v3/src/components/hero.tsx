@@ -19,15 +19,11 @@ const Hero = () => {
     const { clientX, clientY } = e;
     x.set(clientX);
     y.set(clientY);
-
-    //console.log(clientX, clientY, x, y);
   };
 
   const handleMouseEnter = () => {
     setWindowOffset({ innerWidth: window.innerWidth, innerHeight: window.innerHeight });
     setMouseMove(true);
-
-    //console.log(innerWidth, innerHeight);
   };
 
   // add some rotation to main image to track mouse movements
@@ -97,7 +93,7 @@ const Hero = () => {
         >
           {heroIcons.map((icon, i) => (
             <a
-              href="#"
+              href={icon.url}
               key={i}
               className="rounded-lg hover:bg-red-400 hover:-text-white transition-colors"
               title={icon.title}
@@ -112,7 +108,7 @@ const Hero = () => {
           transition={{ delay: 0.7 }}
         >
           <a
-            href="#"
+            href={`/#contact`}
             className="mt-7 block w-max rounded-lg bg-red-400 px-3 py-1 font-light capitalize tracking-wider mx-auto text-white hover:bg-red-500 transition-colors"
             onMouseEnter={() => setButtonHover(true)}
             onMouseLeave={() => setButtonHover(false)}
