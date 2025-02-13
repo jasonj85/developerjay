@@ -23,7 +23,7 @@ const Experience = () => {
 
   return (
     <div id="experience" className="py-20 relative">
-      <Heading text={"Experience & Education"} />
+      <Heading text={"Relevant Experience & Education"} />
       <Image
         src={"/education.png"}
         alt={"Experience image"}
@@ -35,6 +35,7 @@ const Experience = () => {
         ref={containerRef}
         className="relative w-full h-full flex flex-col items-center justofy-center gap-y-10 lg:gap-y-20 py-10"
       >
+        <p className="relative -top-[30px] z-5 text-yellow-500">Latest</p>
         {experienceData.map((data, i) => (
           <div
             key={i}
@@ -92,6 +93,7 @@ const Experience = () => {
           className="absolute w-1 h-[97%] rounded-full bg-gray-400 origin-top pb-20 z-0"
         >
         </motion.div>
+        <p className="relative top-[60px] z-5 text-yellow-500">Oldest</p>
       </div>
     </div>
   );
