@@ -220,33 +220,43 @@ export const aboutText: string =
 // Experience
 export const experienceData: ExperienceDataModel[] = [
   {
-    year: 1,
-    title: "Foundation and Basics",
-    education: "Here are the details about this education!",
+    year: 2024,
+    title: "Full Stack Developer at Startup Company",
+    start: "Jan 2015",
+    end: "Dec 2017",
+    details: "18 month contract",
     experience: ["Experience 1", "Experience 2"],
   },
   {
-    year: 2,
+    year: 2022,
     title: "Advanced Learning and Early Experience",
-    education: "Here are the details about this education!",
+    start: "Jan 2015",
+    end: "Dec 2017",
+    details: "Here are the details about this education!",
     experience: ["Experience 1", "Experience 2"],
   },
   {
     year: 3,
     title: "Specialized Education and Real-World Application",
-    education: "Here are the details about this education!",
+    start: "Jan 2015",
+    end: "Dec 2017",
+    details: "Here are the details about this education!",
     experience: ["Experience 1", "Experience 2"],
   },
   {
     year: 4,
     title: "Building Expertise and Expanding Skills",
-    education: "Here are the details about this education!",
+    start: "Jan 2015",
+    end: "Dec 2017",
+    details: "Here are the details about this education!",
     experience: ["Experience 1", "Experience 2"],
   },
   {
     year: 5,
     title: "Mastery and Leadership",
-    education: "Here are the details about this education!",
+    start: "Jan 2015",
+    end: "Dec 2017",
+    details: "Here are the details about this education!",
     experience: ["Experience 1", "Experience 2"],
   },
 ];
@@ -360,13 +370,43 @@ export const checkIcon = <CheckLineIcon />;
 // Q&A section
 export const questions: QuestionDataModel[] = [
   {
-    question: "How much do you charge for your services?",
-    answer: "This is an example amount of how much I would charge for my services.",
+    question: "Do you prefer working more on the Front-end or Back-end?",
+    answer: "At the start of my career, I worked more on the FE and design, but over the last 10-15 years I've worked on a good balance of FE and BE. If I had to give a preference I would say 60/40 in favour of BackEnd work.",
   },
   {
-    question: "What is your experience with front end work and back end work?",
+    question: "Outside of web development do you have any hobbies?",
     answer:
-      "My univeristy degree was in computer graphics and focused more on front end skills, but over time I have progressed to more back end tasks, so right now I have a good blend of both",
+      "My two loves are health, learning and travelling. As such my hobbies include exercise (gym, football, cycling), self development, reading, learning Spanish,  cooking and playing music (guitar and piano). My love for travelling and experience new cultures has taken me to many countries around the world.",
+  },
+  {
+    question: "What are your strengths?",
+    answer:
+      "My best strengths are that I'm a good problem solver, a quick learner and very persistent. These give me confidence that I can take on any challenge and eventually find a solution.",
+  },
+  {
+    question: "What are your weaknesses?",
+    answer:
+      "Sometimes not asking for help quick enough and not taking enough breaks (to clear my mind) when I'm stuck on a problem.",
+  },
+  {
+    question: "How do you handle stress and pressure in the workplace?",
+    answer:
+      "By setting clear priorites, boundaries and communicating with my colleagues on expectations.",
+  },
+  {
+    question: "How do you stay up to date with industry trends?",
+    answer:
+      "Mainly through subscribed developer youtube channels and then taking courses for new subjects and making sure I put this new knowledge into practical use by creating a small personal project.",
+  },
+  {
+    question: "How do you handle feedback and criticism?",
+    answer:
+      "When I was younger (before around 22 years old) I did not handle criticism well, but I have since been on a huge self-development journey and value how important feedback and constructive criticism is to continue to learn and grow.",
+  },
+  {
+    question: "What motivates you at work?",
+    answer:
+      "I love learning and problem solving. We live in an infinite world learning wise, so I'm motivated everyday by the new things I will learn. ",
   },
 ];
 
@@ -379,9 +419,7 @@ import Home5LineIcon from "remixicon-react/Home5LineIcon";
 import UserLineIcon from "remixicon-react/UserLineIcon";
 import HistoryLineIcon from "remixicon-react/HistoryLineIcon";
 import BriefcaseLineIcon from "remixicon-react/BriefcaseLineIcon";
-import UserStarLineIcon from "remixicon-react/UserStarLineIcon";
 import ProjectorLineIcon from "remixicon-react/ProjectorLineIcon";
-import PriceTag3LineIcon from "remixicon-react/PriceTag3LineIcon";
 import ContactsBook2LineIcon from "remixicon-react/ContactsBook2LineIcon";
 import QuestionAnswerLineIcon from "remixicon-react/QuestionAnswerLineIcon";
 import CopyrightLineIcon from "remixicon-react/CopyrightLineIcon";
@@ -399,30 +437,21 @@ export const navbarData: NavBarDataModel[] = [
     icon: <UserLineIcon />,
   },
   {
-    id: "experience",
-    name: "Experience",
-    icon: <HistoryLineIcon />,
-  },
-  {
     id: "skills",
     name: "Skills",
     icon: <BriefcaseLineIcon />,
   },
   {
-    id: "reviews",
-    name: "Reviews",
-    icon: <UserStarLineIcon />,
+    id: "experience",
+    name: "Experience",
+    icon: <HistoryLineIcon />,
   },
   {
     id: "projects",
     name: "Projects",
     icon: <ProjectorLineIcon />,
   },
-  {
-    id: "pricing",
-    name: "Pricing",
-    icon: <PriceTag3LineIcon />,
-  },
+
   {
     id: "contact",
     name: "Contact",
@@ -433,6 +462,16 @@ export const navbarData: NavBarDataModel[] = [
     name: "Questions",
     icon: <QuestionAnswerLineIcon />,
   },
+  // {
+  //   id: "pricing",
+  //   name: "Pricing",
+  //   icon: <PriceTag3LineIcon />,
+  // },
+  // {
+  //   id: "reviews",
+  //   name: "Reviews",
+  //   icon: <UserStarLineIcon />,
+  // },
 ];
 
 // End of navbar

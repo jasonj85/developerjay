@@ -29,7 +29,9 @@ export type SkillDataModel = {
 export type ExperienceDataModel = {
   year: number;
   title: string;
-  education: string;
+  start: string;
+  end: string;
+  details: string;
   experience: string[];
 };
 
