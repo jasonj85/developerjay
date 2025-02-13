@@ -38,7 +38,7 @@ const NavBar: React.FC<PropTypes> = ({ id }) => {
             <span
               className={`text-[10px] tracking-wide group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 text-center dark:text-white
                 ${i % 2 === 0 ? "translate-x-2" : "-translate-x-2"}
-                ${nav.id === id ? "opacity-100 -translate-x-0" : "opacity-0"}
+                ${nav.id === id ? "opacity-100 translate-x-0" : "opacity-0 translate-x-0"}
               `}
             >
               {nav.name}

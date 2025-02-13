@@ -24,7 +24,7 @@ const Skills = () => {
   return (
     <div id="skills" className="min-h-[400px] mt-0">
       <Heading text={"Skills"} />
-      <div className="py-12">
+      <div className="pb-12">
         <h3 className="text-xl text-yellow-500">Advanced Level</h3>
         <p className="text-gray-800 dark:text-gray-300">
           These are the technologies I've used for many years and still actively work with them on a

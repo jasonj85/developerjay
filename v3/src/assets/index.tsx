@@ -29,6 +29,7 @@ export const heroIcons: HeroIconDataModel[] = [
 ];
 
 // Skills - updated: Feb 2025
+// https://github.com/tandpfun/skill-icons
 export const skillsData: SkillDataModel[] = [
   {
     name: "CSS",
@@ -73,7 +74,7 @@ export const skillsData: SkillDataModel[] = [
     level: SkillLevel.Advanced,
   },
   {
-    name: "Docker Desktop",
+    name: "Docker",
     icon: "/skills/docker.svg",
     exp: 2,
     level: SkillLevel.Basic,
